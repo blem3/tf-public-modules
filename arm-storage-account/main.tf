@@ -6,16 +6,13 @@ resource "azurerm_resource_group_template_deployment" "storage" {
 
   parameters_content = jsonencode({
     "storageAccountName" = {
-      value = var.storage_account_name
+      value = var.name
     }
     "location" = {
       value = var.location
     }
     "storageAccountSku" = {
-      value = var.storage_account_sku
-    }
-    "tags" = {
-      value = var.tags
+      value = var.sku
     }
   })
 }

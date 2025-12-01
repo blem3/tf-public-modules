@@ -3,7 +3,7 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "storage_account_name" {
+variable "name" {
   description = "The name of the storage account"
   type        = string
 }
@@ -13,26 +13,8 @@ variable "location" {
   type        = string
 }
 
-variable "storage_account_sku" {
+variable "sku" {
   description = "The SKU of the storage account"
   type        = string
   default     = "Standard_LRS"
-}
-
-variable "tags" {
-  description = "Tags to apply to resources"
-  type        = map(string)
-  default     = {}
-}
-
-variable "subscription_id" {
-  description = "The Azure Subscription ID"
-  type        = string
-  default     = null
-}
-
-variable "tenant_id" {
-  description = "The Azure Tenant ID"
-  type        = string
-  default     = null
 }
