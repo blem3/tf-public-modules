@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+    }
+  }
+}
+
 resource "azurerm_resource_group_template_deployment" "storage" {
   name                = "storage-deployment"
   resource_group_name = var.resource_group_name
